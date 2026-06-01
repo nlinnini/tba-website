@@ -1,84 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Template Shop | The Banana Applications</title>
-  <meta name="description" content="Purchase The Banana Applications' application materials, templates, and guides." />
+  <meta name="description" content="Buy The Banana Applications digital application materials, templates, and guides." />
+  <meta name="theme-color" content="#041d38" />
+  <meta property="og:title" content="TBA Template Shop" />
+  <meta property="og:description" content="Application materials, templates, and guides by The Banana Applications." />
+  <meta property="og:image" content="tba-logo.png" />
+  <link rel="icon" href="tba-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
-  <header class="site-header">
-    <a class="brand" href="index.html">
+<body data-page="shop">
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="page-noise"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html#top" aria-label="The Banana Applications home">
       <img src="tba-logo.png" alt="The Banana Applications logo" />
       <span>The Banana Applications</span>
     </a>
 
-    <nav class="nav">
-      <a href="index.html" data-i18n="navHome">Home</a>
+    <nav class="desktop-nav" aria-label="Main navigation">
       <a href="index.html#services" data-i18n="navServices">Services</a>
       <a href="results.html" data-i18n="navResults">Results</a>
       <a href="index.html#process" data-i18n="navProcess">Process</a>
+      <a href="index.html#roadmap" data-i18n="navRoadmap">Roadmap Builder</a>
       <a href="shop.html" data-i18n="navShop">Shop</a>
-      <a href="index.html#faq" data-i18n="navFaq">FAQ</a>
+      <a href="index.html#faq" data-i18n="navFAQ">FAQ</a>
     </nav>
 
     <div class="header-actions">
-      <button class="lang-toggle" id="langToggle" type="button">EN / VI</button>
-      <a class="btn btn-gold" id="headerBookBtn" href="#" target="_blank" rel="noreferrer" data-i18n="bookCall">Book Call</a>
+      <button class="lang-toggle" type="button" aria-label="Switch language">
+        <span class="lang-pill active" data-lang="en">EN</span>
+        <span class="lang-pill" data-lang="vi">VI</span>
+      </button>
+      <a class="btn btn-gold btn-small book-link" href="#" target="_blank" rel="noopener" data-i18n="bookShort">Book Call</a>
+      <button class="menu-button" type="button" aria-label="Open menu">☰</button>
     </div>
   </header>
 
-  <main>
-    <section class="shop-hero">
-      <div class="eyebrow" data-i18n="shopEyebrow">TBA Template Shop</div>
+  <div class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html#services" data-i18n="navServices">Services</a>
+    <a href="results.html" data-i18n="navResults">Results</a>
+    <a href="index.html#process" data-i18n="navProcess">Process</a>
+    <a href="index.html#roadmap" data-i18n="navRoadmap">Roadmap Builder</a>
+    <a href="shop.html" data-i18n="navShop">Shop</a>
+    <a href="index.html#faq" data-i18n="navFAQ">FAQ</a>
+  </div>
+
+  <main id="main">
+    <section class="shop-hero section-shell">
+      <p class="eyebrow centered">
+        <span></span>
+        <strong data-i18n="shopEyebrow">TBA Template Shop</strong>
+      </p>
       <h1 data-i18n="shopTitle">Application materials, templates, and guides.</h1>
       <p data-i18n="shopSubtitle">
-        Browse ready-to-use resources created by The Banana Applications to help students prepare stronger applications.
+        Ready-to-use resources created by The Banana Applications to help students prepare stronger applications, interviews, resumes, and recommendation materials.
       </p>
     </section>
 
-    <section class="shop-payment-note">
-      <div class="payment-note-card">
-        <h2 data-i18n="paymentTitle">How payment works</h2>
-        <p data-i18n="paymentText">
-          English checkout uses Payhip/Gumroad. Vietnamese checkout uses Google Form + bank transfer/QR confirmation.
-        </p>
+    <section class="shop-payment section-shell">
+      <div class="shop-payment-card premium-card">
+        <div>
+          <p class="eyebrow"><span></span><strong data-i18n="paymentEyebrow">Checkout options</strong></p>
+          <h2 data-i18n="paymentTitle">Choose your language, then purchase through the matching checkout.</h2>
+          <p data-i18n="paymentBody">
+            English checkout uses Payhip/Gumroad. Vietnamese checkout uses Google Form with bank transfer / VietQR confirmation.
+          </p>
+        </div>
+        <div class="payment-mini-card">
+          <img id="paymentQr" src="payment-qr-placeholder.png" alt="Vietnam payment QR code" />
+          <p id="transferNote">Nội dung chuyển khoản: TBA + Họ tên + Tên tài liệu</p>
+          <a class="btn btn-gold" id="vietFormBtn" href="#" target="_blank" rel="noopener" data-i18n="openForm">Open Google Form</a>
+        </div>
       </div>
     </section>
 
-    <section class="shop-grid-section">
-      <div id="shopGrid" class="shop-grid"></div>
+    <section class="shop-products section-shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow centered"><span></span><strong data-i18n="materialsEyebrow">Digital materials</strong></p>
+        <h2 data-i18n="materialsTitle">Pick one guide or get the full bundle.</h2>
+      </div>
+
+      <div class="shop-grid" id="shopGrid"></div>
     </section>
 
-    <section class="shop-qr-section" id="vietPayment">
-      <div class="qr-card">
+    <section class="final-cta" id="contact">
+      <div class="section-shell final-card reveal">
+        <img src="tba-logo.png" alt="The Banana Applications logo" />
         <div>
-          <div class="eyebrow" data-i18n="vietPaymentEyebrow">Vietnam checkout</div>
-          <h2 data-i18n="vietPaymentTitle">Thanh toán bằng chuyển khoản / VietQR</h2>
-          <p data-i18n="vietPaymentText">
-            Sau khi chuyển khoản, vui lòng điền Google Form và upload ảnh xác nhận. TBA sẽ gửi tài liệu qua email sau khi xác nhận thanh toán.
-          </p>
-          <a class="btn btn-navy" id="vietFormBtn" href="#" target="_blank" rel="noreferrer" data-i18n="openForm">
-            Open Google Form
-          </a>
-        </div>
-
-        <div class="qr-box">
-          <img id="paymentQr" src="payment-qr-placeholder.png" alt="Payment QR code" />
-          <p id="transferNote">Nội dung chuyển khoản: TBA + Họ tên + Tên tài liệu</p>
+          <p class="eyebrow"><span></span><strong data-i18n="shopCtaEyebrow">Need more than templates?</strong></p>
+          <h2 data-i18n="shopCtaTitle">Book a consultation for personalized application support.</h2>
+          <p data-i18n="shopCtaBody">If you want TBA to review your actual profile, essays, school list, or application plan, book a free call.</p>
+          <div class="final-actions">
+            <a class="btn btn-gold book-link" href="#" target="_blank" rel="noopener" data-i18n="bookFull">Book a Free Consultation Call</a>
+            <a class="btn btn-light" href="index.html#services" data-i18n="navServices">Services</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div>
-      <strong>The Banana Applications</strong>
-      <p data-i18n="footerTagline">Craft your story. Build your future.</p>
+    <div class="section-shell footer-grid">
+      <div>
+        <img src="tba-logo.png" alt="The Banana Applications logo" />
+        <p>The Banana Applications</p>
+        <span data-i18n="footerTagline">Application mentorship for ambitious students.</span>
+        <span class="copyright">Copyright © 2026 The Banana Applications. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#services" data-i18n="navServices">Services</a>
+        <a href="results.html" data-i18n="navResults">Results</a>
+        <a href="shop.html" data-i18n="navShop">Shop</a>
+        <a href="index.html#faq" data-i18n="navFAQ">FAQ</a>
+        <a class="book-link" href="#" target="_blank" rel="noopener" data-i18n="bookShort">Book Call</a>
+      </div>
     </div>
-    <p>Copyright © 2026 The Banana Applications. All rights reserved.</p>
   </footer>
 
   <script src="data.js"></script>
