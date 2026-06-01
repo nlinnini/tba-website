@@ -226,7 +226,7 @@ const FAQS = [
 /* =========================================================
    SHOP / TEMPLATE STORE
    Vietnamese checkout: Google Form + QR transfer
-   English checkout: Payhip or Gumroad
+   English checkout: Payhip
    ========================================================= */
 
 const SHOP_PAYMENT = {
