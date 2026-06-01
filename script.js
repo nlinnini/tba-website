@@ -29,3 +29,60 @@ function counters(){const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.i
 function observeReveals(){const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});$$('.reveal').forEach(el=>obs.observe(el))}
 function renderAll(){renderDestinations();renderServices();renderProcess();renderResults();renderFaq();observeReveals()}
 document.addEventListener('DOMContentLoaded',()=>{bindBasics();renderFilters();setLang(currentLang);counters()});
+
+function renderShopProducts() {
+  const grid = document.querySelector('#shopGrid');
+  if (!grid || typeof SHOP_PRODUCTS === 'undefined') return;
+
+  const lang = localStorage.getItem('tbaLang') || document.documentElement.lang || 'en';
+
+  grid.innerHTML = SHOP_PRODUCTS.map((product) => {
+    const isVI = lang === 'vi';
+    const title = isVI ? product.titleVI : product.titleEN;
+    const description = isVI ? product.descriptionVI : product.descriptionEN;
+    const price = isVI ? product.priceVI : product.priceEN;
+    const badge = isVI ? product.badgeVI : product.badgeEN;
+
+    const buyLink = isVI
+      ? SHOP_PAYMENT.vi.formLink
+      : (product.payhipUrl || product.gumroadUrl || '#');
+
+    const buyText = isVI ? 'Mua tài liệu' : 'Buy Now';
+
+    return `
+      <article class="shop-card reveal">
+        <div class="shop-card-top">
+          <span class="shop-badge">${badge}</span>
+          <span class="shop-price">${price}</span>
+        </div>
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <ul class="shop-features">
+          <li>${isVI ? 'File PDF/tài liệu số' : 'Digital PDF/materials'}</li>
+          <li>${isVI ? 'Gửi qua email sau khi xác nhận thanh toán' : 'Delivered after checkout'}</li>
+          <li>${isVI ? 'Phù hợp học sinh apply trường/học bổng' : 'Made for school/scholarship applications'}</li>
+        </ul>
+        <a class="btn btn-navy shop-buy-btn" href="${buyLink}" target="_blank" rel="noreferrer">
+          ${buyText}
+        </a>
+      </article>
+    `;
+  }).join('');
+}
+
+function renderShopPaymentInfo() {
+  if (typeof SHOP_PAYMENT === 'undefined') return;
+
+  const qr = document.querySelector('#paymentQr');
+  const note = document.querySelector('#transferNote');
+  const formBtn = document.querySelector('#vietFormBtn');
+
+  if (qr) qr.src = SHOP_PAYMENT.vi.qrImage;
+  if (note) note.textContent = SHOP_PAYMENT.vi.transferNote;
+  if (formBtn) formBtn.href = SHOP_PAYMENT.vi.formLink;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderShopProducts();
+  renderShopPaymentInfo();
+});
