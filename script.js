@@ -4,7 +4,18 @@ const $=(s,root=document)=>root.querySelector(s);const $$=(s,root=document)=>[..
 function t(key){return I18N[currentLang][key]||I18N.en[key]||key}function langField(obj,key){return obj[key+ (currentLang==='vi'?'VI':'EN')]||obj[key+'EN']||''}
 function setLang(lang){currentLang=lang;localStorage.setItem('tbaLang',lang);document.documentElement.lang=lang;$$('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));$$('.lang-pill').forEach(p=>p.classList.toggle('active',p.dataset.lang===lang));renderAll()}
 function bindBasics(){ $$('.lang-toggle').forEach(btn=>btn.addEventListener('click',e=>{const pill=e.target.closest('.lang-pill'); if(pill) setLang(pill.dataset.lang)})); $('.menu-button')?.addEventListener('click',()=>$('.mobile-menu')?.classList.toggle('open')); $$('.book-link').forEach(a=>a.href=BOOKING_LINK); const email=$('#emailLink'); if(email) email.href=`mailto:${EMAIL}?subject=Free consultation inquiry`; const glow=$('#cursorGlow'); document.addEventListener('pointermove',e=>{if(glow){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'}})}
-function renderDestinations(){const track=$('#destinationTrack'); if(!track)return; const words=[...DESTINATIONS,...DESTINATIONS,...DESTINATIONS]; track.innerHTML=words.map(x=>`<span class="school-wordmark">${x}</span>`).join('')}
+function renderDestinations() {
+  const track = $('#destinationTrack');
+  if (!track) return;
+
+  const schools = [...DESTINATIONS, ...DESTINATIONS, ...DESTINATIONS];
+
+  track.innerHTML = schools.map((school) => `
+    <div class="school-logo-card">
+      <img src="${school.logo}" alt="${school.name} logo" loading="lazy">
+    </div>
+  `).join('');
+}
 function renderServices(){const grid=$('#serviceGrid'); if(!grid)return; grid.innerHTML=SERVICES.map(s=>`<article class="service-card reveal"><div class="service-icon">${s.icon}</div><h3>${langField(s,'title')}</h3><p>${langField(s,'desc')}</p><ul class="deliver-list">${(currentLang==='vi'?s.deliverVI:s.deliverEN).map(d=>`<li>${d}</li>`).join('')}</ul></article>`).join('')}
 function renderProcess(){const grid=$('#processGrid'); if(!grid)return; grid.innerHTML=PROCESS.map(p=>`<article class="process-card reveal"><div class="num">${p.n}</div><h3>${langField(p,'title')}</h3><p>${langField(p,'body')}</p><span class="process-output">${langField(p,'output')}</span></article>`).join('')}
 function resultCard(r){return `<article class="result-card reveal"><div class="result-image"><img src="${r.image}" alt="${langField(r,'school')} result" loading="lazy"></div><div class="result-body"><span class="result-category">${r.category}</span><h3>${langField(r,'school')}</h3><p><strong>${langField(r,'outcome')}</strong> · ${langField(r,'highlight')}</p><p>${langField(r,'meta')}</p><div class="tag-row">${(r.tags||[]).map(x=>`<span>${x}</span>`).join('')}</div><button class="result-open" type="button" data-result="${r.id}">${currentLang==='vi'?'Xem chi tiết':'View details'} →</button></div></article>`}
