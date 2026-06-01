@@ -2,6 +2,7 @@
    THE BANANA APPLICATIONS — EASY EDIT FILE
    No folders needed. Upload all files to GitHub root.
    ========================================================= */
+
 const BOOKING_LINK = "https://calendly.com/thebananaapplication/30min";
 const INSTAGRAM_LINK = "https://www.instagram.com/thebananaapplications";
 const FACEBOOK_LINK = "https://www.facebook.com/TheBananaApplications";
@@ -100,27 +101,133 @@ const RESULTS = [
 ];
 
 const SERVICES = [
-  { icon:"✦", titleEN:"Profile Strategy", titleVI:"Định hướng profile", descEN:"Diagnose strengths, gaps, application themes, target countries, and positioning.", descVI:"Phân tích điểm mạnh, điểm yếu, theme hồ sơ, quốc gia mục tiêu và định vị profile.", deliverEN:["Profile diagnosis", "Theme & positioning", "Priority roadmap"], deliverVI:["Phân tích profile", "Theme & định vị", "Lộ trình ưu tiên"] },
-  { icon:"✍", titleEN:"Essay & Storytelling", titleVI:"Luận & storytelling", descEN:"Turn lived experience into essays with clear voice, structure, and purpose.", descVI:"Biến trải nghiệm cá nhân thành bài luận có voice thật, cấu trúc rõ và mục đích thuyết phục.", deliverEN:["Brainstorming", "Outline review", "Draft feedback"], deliverVI:["Brainstorm ý tưởng", "Sửa outline", "Feedback bản nháp"] },
-  { icon:"◈", titleEN:"Scholarship Planning", titleVI:"Chiến lược học bổng", descEN:"Shortlist scholarships, review eligibility, and plan essays around fit.", descVI:"Lọc học bổng phù hợp, kiểm tra điều kiện và lên chiến lược bài luận.", deliverEN:["Scholarship list", "Deadline tracker", "Essay strategy"], deliverVI:["Danh sách học bổng", "Tracker deadline", "Chiến lược luận"] },
-  { icon:"☀", titleEN:"Summer Programs", titleVI:"Chương trình hè", descEN:"Find selective programs and academic opportunities that support the student’s story.", descVI:"Tìm chương trình hè và cơ hội học thuật phù hợp với câu chuyện của học sinh.", deliverEN:["Program shortlist", "Fit notes", "Application timeline"], deliverVI:["Danh sách chương trình", "Ghi chú độ fit", "Timeline apply"] },
-  { icon:"♛", titleEN:"Competitions & Projects", titleVI:"Cuộc thi & dự án", descEN:"Build credible outcomes through competitions, passion projects, research, and impact work.", descVI:"Xây dựng thành tích thuyết phục qua cuộc thi, passion project, research và impact work.", deliverEN:["Opportunity map", "Project direction", "Impact wording"], deliverVI:["Bản đồ cơ hội", "Định hướng project", "Cách viết impact"] },
-  { icon:"→", titleEN:"Canada/US Applications", titleVI:"Apply Canada/US", descEN:"Plan school lists, portals, documents, deadlines, scholarships, and application priorities.", descVI:"Lên school list, portal, giấy tờ, deadline, học bổng và thứ tự ưu tiên khi apply.", deliverEN:["School list", "Application tracker", "Final checklist"], deliverVI:["School list", "Tracker hồ sơ", "Checklist cuối"] }
+  {
+    icon: "✦",
+    titleEN: "Profile Strategy",
+    titleVI: "Định hướng profile",
+    descEN: "Diagnose strengths, gaps, application themes, target countries, and positioning.",
+    descVI: "Phân tích điểm mạnh, điểm yếu, theme hồ sơ, quốc gia mục tiêu và định vị profile.",
+    deliverEN: ["Profile diagnosis", "Theme & positioning", "Priority roadmap"],
+    deliverVI: ["Phân tích profile", "Theme & định vị", "Lộ trình ưu tiên"]
+  },
+  {
+    icon: "✍",
+    titleEN: "Essay & Storytelling",
+    titleVI: "Luận & storytelling",
+    descEN: "Turn lived experience into essays with clear voice, structure, and purpose.",
+    descVI: "Biến trải nghiệm cá nhân thành bài luận có voice thật, cấu trúc rõ và mục đích thuyết phục.",
+    deliverEN: ["Brainstorming", "Outline review", "Draft feedback"],
+    deliverVI: ["Brainstorm ý tưởng", "Sửa outline", "Feedback bản nháp"]
+  },
+  {
+    icon: "◈",
+    titleEN: "Scholarship Planning",
+    titleVI: "Chiến lược học bổng",
+    descEN: "Shortlist scholarships, review eligibility, and plan essays around fit.",
+    descVI: "Lọc học bổng phù hợp, kiểm tra điều kiện và lên chiến lược bài luận.",
+    deliverEN: ["Scholarship list", "Deadline tracker", "Essay strategy"],
+    deliverVI: ["Danh sách học bổng", "Tracker deadline", "Chiến lược luận"]
+  },
+  {
+    icon: "☀",
+    titleEN: "Summer Programs",
+    titleVI: "Chương trình hè",
+    descEN: "Find selective programs and academic opportunities that support the student’s story.",
+    descVI: "Tìm chương trình hè và cơ hội học thuật phù hợp với câu chuyện của học sinh.",
+    deliverEN: ["Program shortlist", "Fit notes", "Application timeline"],
+    deliverVI: ["Danh sách chương trình", "Ghi chú độ fit", "Timeline apply"]
+  },
+  {
+    icon: "♛",
+    titleEN: "Competitions & Projects",
+    titleVI: "Cuộc thi & dự án",
+    descEN: "Build credible outcomes through competitions, passion projects, research, and impact work.",
+    descVI: "Xây dựng thành tích thuyết phục qua cuộc thi, passion project, research và impact work.",
+    deliverEN: ["Opportunity map", "Project direction", "Impact wording"],
+    deliverVI: ["Bản đồ cơ hội", "Định hướng project", "Cách viết impact"]
+  },
+  {
+    icon: "→",
+    titleEN: "Canada/US Applications",
+    titleVI: "Apply Canada/US",
+    descEN: "Plan school lists, portals, documents, deadlines, scholarships, and application priorities.",
+    descVI: "Lên school list, portal, giấy tờ, deadline, học bổng và thứ tự ưu tiên khi apply.",
+    deliverEN: ["School list", "Application tracker", "Final checklist"],
+    deliverVI: ["School list", "Tracker hồ sơ", "Checklist cuối"]
+  }
 ];
 
 const PROCESS = [
-  {n:"01", titleEN:"Free Consultation", titleVI:"Tư vấn miễn phí", bodyEN:"A first call to understand goals, timeline, target countries, budget sensitivity, and the student’s current profile.", bodyVI:"Buổi call đầu tiên để hiểu mục tiêu, timeline, quốc gia apply, mức độ hỗ trợ cần thiết và profile hiện tại.", outputEN:"Initial direction + recommended next step", outputVI:"Định hướng ban đầu + bước tiếp theo phù hợp"},
-  {n:"02", titleEN:"Discovery & Diagnosis", titleVI:"Phân tích profile", bodyEN:"We identify strengths, gaps, personality, interests, constraints, and the application story that can anchor the strategy.", bodyVI:"TBA tìm điểm mạnh, điểm yếu, tính cách, sở thích, giới hạn và câu chuyện hồ sơ có thể làm nền tảng chiến lược.", outputEN:"Profile audit + strategic theme", outputVI:"Audit profile + theme chiến lược"},
-  {n:"03", titleEN:"Personalized Roadmap", titleVI:"Lộ trình cá nhân hoá", bodyEN:"Mentors support profile-building through extracurriculars, passion projects, research opportunities, competitions, summer programs, and milestones.", bodyVI:"Mentor đồng hành xây dựng profile qua hoạt động ngoại khoá, passion project, research project, cuộc thi, chương trình hè và milestone cụ thể.", outputEN:"Roadmap + monthly execution priorities", outputVI:"Lộ trình + ưu tiên thực hiện từng tháng"},
-  {n:"04", titleEN:"Application Sprint", titleVI:"Giai đoạn hoàn thiện hồ sơ", bodyEN:"We finalize school lists, scholarship targets, essay ideas, revisions, activities list, resume, documents, and submission readiness.", bodyVI:"TBA cùng học sinh finalize list trường, học bổng, ý tưởng luận, sửa luận, activities list, resume, giấy tờ và chuẩn bị nộp hồ sơ.", outputEN:"Complete application package", outputVI:"Bộ hồ sơ hoàn chỉnh để nộp"}
+  {
+    n: "01",
+    titleEN: "Free Consultation",
+    titleVI: "Tư vấn miễn phí",
+    bodyEN: "A first call to understand goals, timeline, target countries, budget sensitivity, and the student’s current profile.",
+    bodyVI: "Buổi call đầu tiên để hiểu mục tiêu, timeline, quốc gia apply, mức độ hỗ trợ cần thiết và profile hiện tại.",
+    outputEN: "Initial direction + recommended next step",
+    outputVI: "Định hướng ban đầu + bước tiếp theo phù hợp"
+  },
+  {
+    n: "02",
+    titleEN: "Discovery & Diagnosis",
+    titleVI: "Phân tích profile",
+    bodyEN: "We identify strengths, gaps, personality, interests, constraints, and the application story that can anchor the strategy.",
+    bodyVI: "TBA tìm điểm mạnh, điểm yếu, tính cách, sở thích, giới hạn và câu chuyện hồ sơ có thể làm nền tảng chiến lược.",
+    outputEN: "Profile audit + strategic theme",
+    outputVI: "Audit profile + theme chiến lược"
+  },
+  {
+    n: "03",
+    titleEN: "Personalized Roadmap",
+    titleVI: "Lộ trình cá nhân hoá",
+    bodyEN: "Mentors support profile-building through extracurriculars, passion projects, research opportunities, competitions, summer programs, and milestones.",
+    bodyVI: "Mentor đồng hành xây dựng profile qua hoạt động ngoại khoá, passion project, research project, cuộc thi, chương trình hè và milestone cụ thể.",
+    outputEN: "Roadmap + monthly execution priorities",
+    outputVI: "Lộ trình + ưu tiên thực hiện từng tháng"
+  },
+  {
+    n: "04",
+    titleEN: "Application Sprint",
+    titleVI: "Giai đoạn hoàn thiện hồ sơ",
+    bodyEN: "We finalize school lists, scholarship targets, essay ideas, revisions, activities list, resume, documents, and submission readiness.",
+    bodyVI: "TBA cùng học sinh finalize list trường, học bổng, ý tưởng luận, sửa luận, activities list, resume, giấy tờ và chuẩn bị nộp hồ sơ.",
+    outputEN: "Complete application package",
+    outputVI: "Bộ hồ sơ hoàn chỉnh để nộp"
+  }
 ];
 
 const FAQS = [
-  { qEN:"Do you publish pricing on the website?", qVI:"TBA có công khai giá trên website không?", aEN:"No. Pricing depends on goals, timeline, target countries, and level of support. Book a free consultation so we can recommend the most suitable plan.", aVI:"Không. Chi phí phụ thuộc vào mục tiêu, timeline, quốc gia apply và mức độ hỗ trợ. Bạn có thể đặt lịch tư vấn miễn phí để TBA đề xuất hướng phù hợp."},
-  { qEN:"Who is TBA for?", qVI:"TBA phù hợp với ai?", aEN:"High school students and families who want clearer direction for Canada/US applications, scholarships, essays, activities, and profile building.", aVI:"Học sinh và phụ huynh muốn có định hướng rõ hơn cho hồ sơ Canada/US, học bổng, bài luận, hoạt động và xây dựng profile."},
-  { qEN:"Can I work with TBA in Vietnamese?", qVI:"Có thể làm việc với TBA bằng tiếng Việt không?", aEN:"Yes. TBA supports students and families in both English and Vietnamese.", aVI:"Có. TBA hỗ trợ học sinh và phụ huynh bằng cả tiếng Anh và tiếng Việt."},
-  { qEN:"Do you guarantee admissions or scholarships?", qVI:"TBA có cam kết đậu trường/học bổng không?", aEN:"No ethical mentorship service can guarantee admission. We focus on strategy, authentic storytelling, and stronger execution.", aVI:"Không dịch vụ mentor uy tín nào có thể cam kết chắc chắn đậu. TBA tập trung vào chiến lược, storytelling thật và cách triển khai hồ sơ tốt hơn."}
+  {
+    qEN: "Do you publish pricing on the website?",
+    qVI: "TBA có công khai giá trên website không?",
+    aEN: "No. Pricing depends on goals, timeline, target countries, and level of support. Book a free consultation so we can recommend the most suitable plan.",
+    aVI: "Không. Chi phí phụ thuộc vào mục tiêu, timeline, quốc gia apply và mức độ hỗ trợ. Bạn có thể đặt lịch tư vấn miễn phí để TBA đề xuất hướng phù hợp."
+  },
+  {
+    qEN: "Who is TBA for?",
+    qVI: "TBA phù hợp với ai?",
+    aEN: "High school students and families who want clearer direction for Canada/US applications, scholarships, essays, activities, and profile building.",
+    aVI: "Học sinh và phụ huynh muốn có định hướng rõ hơn cho hồ sơ Canada/US, học bổng, bài luận, hoạt động và xây dựng profile."
+  },
+  {
+    qEN: "Can I work with TBA in Vietnamese?",
+    qVI: "Có thể làm việc với TBA bằng tiếng Việt không?",
+    aEN: "Yes. TBA supports students and families in both English and Vietnamese.",
+    aVI: "Có. TBA hỗ trợ học sinh và phụ huynh bằng cả tiếng Anh và tiếng Việt."
+  },
+  {
+    qEN: "Do you guarantee admissions or scholarships?",
+    qVI: "TBA có cam kết đậu trường/học bổng không?",
+    aEN: "No ethical mentorship service can guarantee admission. We focus on strategy, authentic storytelling, and stronger execution.",
+    aVI: "Không dịch vụ mentor uy tín nào có thể cam kết chắc chắn đậu. TBA tập trung vào chiến lược, storytelling thật và cách triển khai hồ sơ tốt hơn."
+  }
 ];
+
+/* =========================================================
+   SHOP / TEMPLATE STORE
+   Vietnamese checkout: Google Form + QR transfer
+   English checkout: Payhip or Gumroad
+   ========================================================= */
 
 const SHOP_PAYMENT = {
   vi: {
@@ -129,3 +236,98 @@ const SHOP_PAYMENT = {
     transferNote: "Nội dung chuyển khoản: TBA + Họ tên + Tên tài liệu"
   }
 };
+
+const SHOP_PRODUCTS = [
+  {
+    id: "interview-materials",
+    titleEN: "Interview Question Materials",
+    titleVI: "Tài liệu Câu hỏi Phỏng vấn",
+    descriptionEN: "A practical interview preparation guide with question frameworks, answer-building guidance, and sample responses for school and scholarship interviews.",
+    descriptionVI: "Tài liệu luyện phỏng vấn với khung xây dựng câu trả lời, hướng dẫn trả lời và một số câu trả lời mẫu cho phỏng vấn trường/học bổng.",
+    priceEN: "$9 CAD",
+    priceVI: "199.000 VND",
+    badgeEN: "Interview Prep",
+    badgeVI: "Phỏng vấn",
+    featuresEN: [
+      "Question frameworks",
+      "Sample responses",
+      "School and scholarship interview prep"
+    ],
+    featuresVI: [
+      "Khung xây dựng câu trả lời",
+      "Một số câu trả lời mẫu",
+      "Phù hợp phỏng vấn trường/học bổng"
+    ],
+    payhipUrl: "https://payhip.com/YOUR_INTERVIEW_LINK",
+    gumroadUrl: "https://gumroad.com/l/YOUR_INTERVIEW_LINK"
+  },
+  {
+    id: "resume-materials",
+    titleEN: "CV / Resume Materials",
+    titleVI: "Tài liệu CV / Resume",
+    descriptionEN: "A student-friendly guide to writing stronger CVs and resumes, including structure, sections, example wording, and application-ready formatting tips.",
+    descriptionVI: "Hướng dẫn viết CV/Resume cho học sinh, bao gồm bố cục, các mục cần có, ví dụ cách trình bày và tips để dùng cho hồ sơ apply.",
+    priceEN: "$9 CAD",
+    priceVI: "199.000 VND",
+    badgeEN: "Resume/CV",
+    badgeVI: "CV/Resume",
+    featuresEN: [
+      "CV/resume structure",
+      "Example wording",
+      "Application-ready checklist"
+    ],
+    featuresVI: [
+      "Bố cục CV/resume",
+      "Ví dụ cách viết",
+      "Checklist trước khi nộp"
+    ],
+    payhipUrl: "https://payhip.com/YOUR_RESUME_LINK",
+    gumroadUrl: "https://gumroad.com/l/YOUR_RESUME_LINK"
+  },
+  {
+    id: "lor-materials",
+    titleEN: "Letter of Recommendation Materials",
+    titleVI: "Tài liệu Thư Giới thiệu",
+    descriptionEN: "A recommendation letter guide covering recommender selection, letter structure, content strategy, evidence-building, and sample letters.",
+    descriptionVI: "Hướng dẫn thư giới thiệu gồm cách chọn người viết, bố cục thư, chiến lược nội dung, cách chuẩn bị dẫn chứng và thư mẫu.",
+    priceEN: "$9 CAD",
+    priceVI: "199.000 VND",
+    badgeEN: "Recommendation",
+    badgeVI: "Thư giới thiệu",
+    featuresEN: [
+      "Recommender selection",
+      "Letter structure",
+      "Sample recommendation letters"
+    ],
+    featuresVI: [
+      "Cách chọn người viết thư",
+      "Bố cục thư giới thiệu",
+      "Thư giới thiệu mẫu"
+    ],
+    payhipUrl: "https://payhip.com/YOUR_LOR_LINK",
+    gumroadUrl: "https://gumroad.com/l/YOUR_LOR_LINK"
+  },
+  {
+    id: "complete-bundle",
+    titleEN: "Complete Materials Bundle",
+    titleVI: "Combo 3 Tài liệu Apply",
+    descriptionEN: "Get all three TBA materials: Interview Questions, CV/Resume, and Letter of Recommendation guides in one bundle.",
+    descriptionVI: "Bao gồm cả 3 tài liệu của TBA: Câu hỏi Phỏng vấn, CV/Resume và Thư Giới thiệu trong một combo.",
+    priceEN: "$19 CAD",
+    priceVI: "399.000 VND",
+    badgeEN: "Best Value",
+    badgeVI: "Tiết kiệm nhất",
+    featuresEN: [
+      "Interview Question Materials",
+      "CV / Resume Materials",
+      "Letter of Recommendation Materials"
+    ],
+    featuresVI: [
+      "Tài liệu Câu hỏi Phỏng vấn",
+      "Tài liệu CV / Resume",
+      "Tài liệu Thư Giới thiệu"
+    ],
+    payhipUrl: "https://payhip.com/YOUR_BUNDLE_LINK",
+    gumroadUrl: "https://gumroad.com/l/YOUR_BUNDLE_LINK"
+  }
+];
