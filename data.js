@@ -231,7 +231,7 @@ const FAQS = [
 
 const SHOP_PAYMENT = {
   vi: {
-    formLink: "https://forms.gle/YOUR_GOOGLE_FORM_LINK",
+    formLink: "https://forms.gle/Twxg3v2rLxBCtsow9",
     qrImage: "QR.png",
     transferNote: "Nội dung chuyển khoản: TBA + Họ tên + Tên tài liệu"
   }
