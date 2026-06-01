@@ -258,7 +258,7 @@ const SHOP_PRODUCTS = [
       "Một số câu trả lời mẫu",
       "Phù hợp phỏng vấn trường/học bổng"
     ],
-    payhipUrl: "https://payhip.com/YOUR_INTERVIEW_LINK"
+    payhipUrl: "https://payhip.com/b/bx3Mc"
   },
   {
     id: "resume-materials",
@@ -280,7 +280,7 @@ const SHOP_PRODUCTS = [
       "Ví dụ cách viết",
       "Checklist trước khi nộp"
     ],
-    payhipUrl: "https://payhip.com/YOUR_RESUME_LINK"
+    payhipUrl: "https://payhip.com/b/LVyg4"
   },
   {
     id: "lor-materials",
@@ -302,7 +302,7 @@ const SHOP_PRODUCTS = [
       "Bố cục thư giới thiệu",
       "Thư giới thiệu mẫu"
     ],
-    payhipUrl: "https://payhip.com/YOUR_LOR_LINK"
+    payhipUrl: "https://payhip.com/b/BKAf9"
   },
   {
     id: "complete-bundle",
@@ -324,6 +324,6 @@ const SHOP_PRODUCTS = [
       "Tài liệu CV / Resume",
       "Tài liệu Thư Giới thiệu"
     ],
-    payhipUrl: "https://payhip.com/YOUR_BUNDLE_LINK"
+    payhipUrl: "https://payhip.com/b/HwTK2"
   }
 ];
