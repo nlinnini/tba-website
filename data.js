@@ -8,8 +8,30 @@ const FACEBOOK_LINK = "https://www.facebook.com/TheBananaApplications";
 const EMAIL = "thebananaapplications@gmail.com";
 
 const DESTINATIONS = [
-  "Rice University.png", "NYU.png", "UToronto.png", "UBC.png",
-  "UMichigan.png", "UAlberta.png", "UCalgary.png", "YorkU.png", "UIllinois.png", "UMass.png", "UMinnesota.png", "RIT.png"
+  {
+    name: "Rice University",
+    logo: "Rice University.png"
+  },
+  {
+    name: "University of Illinois Urbana-Champaign",
+    logo: "UIllinois.png"
+  },
+  {
+    name: "New York University",
+    logo: "NYU.png"
+  },
+  {
+    name: "University of Toronto",
+    logo: "UToronto.png"
+  },
+  {
+    name: "University of British Columbia",
+    logo: "UBC.png"
+  },
+  {
+    name: "University of Michigan",
+    logo: "UMichigan.png"
+  }
 ];
 
 const RESULTS = [
