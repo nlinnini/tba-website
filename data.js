@@ -121,3 +121,11 @@ const FAQS = [
   { qEN:"Can I work with TBA in Vietnamese?", qVI:"Có thể làm việc với TBA bằng tiếng Việt không?", aEN:"Yes. TBA supports students and families in both English and Vietnamese.", aVI:"Có. TBA hỗ trợ học sinh và phụ huynh bằng cả tiếng Anh và tiếng Việt."},
   { qEN:"Do you guarantee admissions or scholarships?", qVI:"TBA có cam kết đậu trường/học bổng không?", aEN:"No ethical mentorship service can guarantee admission. We focus on strategy, authentic storytelling, and stronger execution.", aVI:"Không dịch vụ mentor uy tín nào có thể cam kết chắc chắn đậu. TBA tập trung vào chiến lược, storytelling thật và cách triển khai hồ sơ tốt hơn."}
 ];
+
+const SHOP_PAYMENT = {
+  vi: {
+    formLink: "https://forms.gle/YOUR_GOOGLE_FORM_LINK",
+    qrImage: "QR.png",
+    transferNote: "Nội dung chuyển khoản: TBA + Họ tên + Tên tài liệu"
+  }
+};
