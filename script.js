@@ -86,7 +86,6 @@ const I18N = {
     shopSubtitle: "Ready-to-use resources created by The Banana Applications to help students prepare stronger applications, interviews, resumes, and recommendation materials.",
     paymentEyebrow: "Checkout options",
     paymentTitle: "Choose your language, then purchase through the matching checkout.",
-    paymentBody: "English checkout uses Payhip/Gumroad. Vietnamese checkout uses Google Form with bank transfer / VietQR confirmation.",
     openForm: "Open Google Form",
     materialsEyebrow: "Digital materials",
     materialsTitle: "Pick one guide or get the full bundle.",
@@ -181,8 +180,7 @@ const I18N = {
     shopTitle: "Tài liệu, template và hướng dẫn apply.",
     shopSubtitle: "Các tài liệu được TBA chuẩn bị sẵn để giúp học sinh chuẩn bị hồ sơ, phỏng vấn, CV/resume và thư giới thiệu tốt hơn.",
     paymentEyebrow: "Cách thanh toán",
-    paymentTitle: "Chọn ngôn ngữ phù hợp, sau đó thanh toán theo hướng dẫn.",
-    paymentBody: "Bản tiếng Việt thanh toán qua Google Form kèm chuyển khoản/VietQR. Bản tiếng Anh thanh toán qua Payhip/Gumroad.",
+    paymentTitle: "Chọn ngôn ngữ phù hợp, sau đó thanh toán theo hướng dẫn."
     openForm: "Mở Google Form",
     materialsEyebrow: "Tài liệu số",
     materialsTitle: "Mua lẻ từng tài liệu hoặc chọn combo đầy đủ.",
@@ -547,7 +545,7 @@ function renderShopProducts() {
 
     const buyLink = isVI
       ? SHOP_PAYMENT.vi.formLink
-      : (product.payhipUrl || product.gumroadUrl || "#");
+      : (product.payhipUrl || "#");
 
     const buyText = isVI ? "Mua tài liệu" : "Buy Now";
 
