@@ -9,28 +9,54 @@ const EMAIL = "thebananaapplications@gmail.com";
 
 const DESTINATIONS = [
   {
-    name: "Rice University",
-    logo: "Rice University.png"
-  },
-  {
-    name: "University of Illinois Urbana-Champaign",
-    logo: "UIllinois.png"
-  },
-  {
     name: "New York University",
-    logo: "NYU.png"
+    logo: "NYU.png",
+    scale: 1
   },
   {
-    name: "University of Toronto",
-    logo: "UToronto.png"
+    name: "Rice University",
+    logo: "Rice University.png",
+    scale: 1
+  },
+  {
+    name: "University of Alberta",
+    logo: "UAlberta.png",
+    scale: 1
   },
   {
     name: "University of British Columbia",
-    logo: "UBC.png"
+    logo: "UBC.png",
+    scale: 1
+  },
+  {
+    name: "University of Calgary",
+    logo: "UCalgary.png",
+    scale: 1
+  },
+  {
+    name: "University of Connecticut",
+    logo: "UConn.png",
+    scale: 1
+  },
+  {
+    name: "University of Illinois Urbana-Champaign",
+    logo: "UIllinois.png",
+    scale: 1
+  },
+  {
+    name: "University of Massachusetts",
+    logo: "UMass.png",
+    scale: 1
   },
   {
     name: "University of Michigan",
-    logo: "UMichigan.png"
+    logo: "UMichigan.png",
+    scale: 1
+  },
+  {
+    name: "University of Toronto",
+    logo: "UToronto.png",
+    scale: 1
   }
 ];
 
