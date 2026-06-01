@@ -2,10 +2,10 @@
    THE BANANA APPLICATIONS — EASY EDIT FILE
    No folders needed. Upload all files to GitHub root.
    ========================================================= */
-const BOOKING_LINK = "https://calendly.com/thebananaapplications/free-consultation";
+const BOOKING_LINK = "https://calendly.com/thebananaapplication/30min";
 const INSTAGRAM_LINK = "https://www.instagram.com/thebananaapplications";
 const FACEBOOK_LINK = "https://www.facebook.com/TheBananaApplications";
-const EMAIL = "thebananaapplications@gmail.com";
+const EMAIL = "thebananaapplication@gmail.com";
 
 const DESTINATIONS = [
   {
