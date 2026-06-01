@@ -8,8 +8,8 @@ const FACEBOOK_LINK = "https://www.facebook.com/TheBananaApplications";
 const EMAIL = "thebananaapplications@gmail.com";
 
 const DESTINATIONS = [
-  "Rice University", "New York University", "University of Toronto", "University of British Columbia",
-  "University of Alberta", "Macalester College", "UWC", "Northwestern University", "McGill University", "University of Waterloo"
+  "Rice University.png", "NYU.png", "UToronto.png", "UBC.png",
+  "UMichigan.png", "UAlberta.png", "UCalgary.png", "YorkU.png", "UIllinois.png", "UMass.png", "UMinnesota.png", "RIT.png"
 ];
 
 const RESULTS = [
