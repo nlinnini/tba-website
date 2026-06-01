@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Results | The Banana Applications</title>
+  <meta name="description" content="Explore student admissions, scholarship, competition, program, and portfolio outcomes from The Banana Applications mentees." />
+  <meta name="theme-color" content="#041d38" />
+  <meta property="og:title" content="Student Results | The Banana Applications" />
+  <meta property="og:description" content="A bilingual portfolio of representative TBA mentee outcomes, with privacy-protected screenshots and case notes." />
+  <meta property="og:image" content="tba-logo.png" />
+  <link rel="icon" href="tba-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="results">
+  <div class="cursor-glow" id="cursorGlow"></div><div class="page-noise"></div>
+  <header class="site-header" id="top"><a class="brand" href="index.html#top"><img src="tba-logo.png" alt="The Banana Applications logo" /><span>The Banana Applications</span></a><nav class="desktop-nav"><a href="index.html#services" data-i18n="navServices">Services</a><a href="results.html" data-i18n="navResults">Results</a><a href="index.html#process" data-i18n="navProcess">Process</a><a href="index.html#roadmap" data-i18n="navRoadmap">Roadmap Builder</a><a href="index.html#faq" data-i18n="navFAQ">FAQ</a></nav><div class="header-actions"><button class="lang-toggle" type="button"><span class="lang-pill active" data-lang="en">EN</span><span class="lang-pill" data-lang="vi">VI</span></button><a class="btn btn-gold btn-small book-link" href="#" target="_blank" rel="noopener" data-i18n="bookShort">Book Call</a><button class="menu-button" type="button">☰</button></div></header>
+  <div class="mobile-menu"><a href="index.html#services" data-i18n="navServices">Services</a><a href="results.html" data-i18n="navResults">Results</a><a href="index.html#process" data-i18n="navProcess">Process</a><a href="index.html#roadmap" data-i18n="navRoadmap">Roadmap Builder</a><a href="index.html#faq" data-i18n="navFAQ">FAQ</a></div>
+  <main>
+    <section class="results-hero section-shell"><div class="reveal"><p class="eyebrow"><span></span><strong data-i18n="resultsEyebrow">Student results</strong></p><h1 data-i18n="resultsPageTitle">Student outcomes, portfolio wins, and application milestones.</h1><p class="hero-subtitle" data-i18n="resultsPageSubtitle">Browse TBA’s representative mentee results. Each card can include an anonymized screenshot, outcome summary, category, tags, and the support scope TBA provided.</p><div class="hero-buttons"><a class="btn btn-navy book-link" href="#" target="_blank" rel="noopener" data-i18n="bookFull">Book a Free Consultation Call</a><a class="btn btn-outline" href="index.html#services" data-i18n="exploreServices">Explore Our Services</a></div></div><div class="results-hero-card premium-card reveal delay-1"><img src="tba-logo.png" alt="The Banana Applications logo" /><div><strong>Admissions · Scholarships · Programs</strong><span data-i18n="privacyLine">Privacy-protected results library</span></div></div></section>
+    <section class="university-strip"><div class="section-shell university-heading reveal"><p class="eyebrow centered"><span></span><strong data-i18n="marqueeEyebrow">Where TBA mentees have landed</strong></p><h2 data-i18n="marqueeTitle">Mentees supported by TBA have reached selective schools and programs.</h2></div><div class="logo-marquee"><div class="logo-track" id="destinationTrack"></div></div></section>
+    <section class="results-section full-results" id="results"><div class="section-shell"><div class="results-top reveal"><div><p class="eyebrow"><span></span><strong data-i18n="resultsEyebrow">Student results</strong></p><h2 data-i18n="resultsLibraryTitle">Full results library.</h2></div><p data-i18n="resultsLibrarySubtitle">Use filters, search, and sort tools to organize results as the portfolio grows. Add more cards in data.js without touching the layout.</p></div><div class="results-tools reveal delay-1"><input id="resultSearch" type="search" placeholder="Search school, outcome, category..." /><select id="sortResults"><option value="default">Featured order</option><option value="school">School A–Z</option><option value="category">Category</option></select></div><div class="filter-row reveal delay-1" id="filterRow"></div><div class="results-grid" id="resultsGrid"></div><div class="inline-cta reveal"><div><p data-i18n="inlineCtaSmall">Want a roadmap for your profile?</p><h3 data-i18n="inlineCtaTitle">Let’s map your next best step.</h3></div><a class="btn btn-gold book-link" href="#" target="_blank" rel="noopener" data-i18n="bookFull">Book a Free Consultation Call</a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="section-shell footer-grid"><div><img src="tba-logo.png" alt="The Banana Applications logo" /><p>The Banana Applications</p><span data-i18n="footerTagline">Application mentorship for ambitious students.</span><span class="copyright">Copyright © 2026 The Banana Applications. All rights reserved.</span></div><div class="footer-links"><a href="index.html#services" data-i18n="navServices">Services</a><a href="results.html" data-i18n="navResults">Results</a><a href="index.html#faq" data-i18n="navFAQ">FAQ</a><a class="book-link" href="#" target="_blank" rel="noopener" data-i18n="bookShort">Book Call</a></div></div></footer>
+  <dialog class="result-modal" id="resultModal"><button class="modal-close" type="button">×</button><div id="modalContent"></div></dialog>
+  <script src="data.js"></script><script src="script.js"></script>
+</body>
+</html>
