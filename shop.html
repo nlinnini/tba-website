@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Shop | The Banana Applications</title>
+  <meta name="description" content="Purchase The Banana Applications' application materials, templates, and guides." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="tba-logo.png" alt="The Banana Applications logo" />
+      <span>The Banana Applications</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html" data-i18n="navHome">Home</a>
+      <a href="index.html#services" data-i18n="navServices">Services</a>
+      <a href="results.html" data-i18n="navResults">Results</a>
+      <a href="index.html#process" data-i18n="navProcess">Process</a>
+      <a href="shop.html" data-i18n="navShop">Shop</a>
+      <a href="index.html#faq" data-i18n="navFaq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="langToggle" type="button">EN / VI</button>
+      <a class="btn btn-gold" id="headerBookBtn" href="#" target="_blank" rel="noreferrer" data-i18n="bookCall">Book Call</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <div class="eyebrow" data-i18n="shopEyebrow">TBA Template Shop</div>
+      <h1 data-i18n="shopTitle">Application materials, templates, and guides.</h1>
+      <p data-i18n="shopSubtitle">
+        Browse ready-to-use resources created by The Banana Applications to help students prepare stronger applications.
+      </p>
+    </section>
+
+    <section class="shop-payment-note">
+      <div class="payment-note-card">
+        <h2 data-i18n="paymentTitle">How payment works</h2>
+        <p data-i18n="paymentText">
+          English checkout uses Payhip/Gumroad. Vietnamese checkout uses Google Form + bank transfer/QR confirmation.
+        </p>
+      </div>
+    </section>
+
+    <section class="shop-grid-section">
+      <div id="shopGrid" class="shop-grid"></div>
+    </section>
+
+    <section class="shop-qr-section" id="vietPayment">
+      <div class="qr-card">
+        <div>
+          <div class="eyebrow" data-i18n="vietPaymentEyebrow">Vietnam checkout</div>
+          <h2 data-i18n="vietPaymentTitle">Thanh toán bằng chuyển khoản / VietQR</h2>
+          <p data-i18n="vietPaymentText">
+            Sau khi chuyển khoản, vui lòng điền Google Form và upload ảnh xác nhận. TBA sẽ gửi tài liệu qua email sau khi xác nhận thanh toán.
+          </p>
+          <a class="btn btn-navy" id="vietFormBtn" href="#" target="_blank" rel="noreferrer" data-i18n="openForm">
+            Open Google Form
+          </a>
+        </div>
+
+        <div class="qr-box">
+          <img id="paymentQr" src="payment-qr-placeholder.png" alt="Payment QR code" />
+          <p id="transferNote">Nội dung chuyển khoản: TBA + Họ tên + Tên tài liệu</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>The Banana Applications</strong>
+      <p data-i18n="footerTagline">Craft your story. Build your future.</p>
+    </div>
+    <p>Copyright © 2026 The Banana Applications. All rights reserved.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
