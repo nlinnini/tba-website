@@ -86,6 +86,7 @@ const I18N = {
     shopSubtitle: "Ready-to-use resources created by The Banana Applications to help students prepare stronger applications, interviews, resumes, and recommendation materials.",
     paymentEyebrow: "Checkout options",
     paymentTitle: "Choose your language, then purchase through the matching checkout.",
+    paymentBody: "English checkout uses Payhip. Vietnamese checkout uses Google Form with bank transfer / VietQR confirmation.",
     openForm: "Open Google Form",
     materialsEyebrow: "Digital materials",
     materialsTitle: "Pick one guide or get the full bundle.",
@@ -180,7 +181,8 @@ const I18N = {
     shopTitle: "Tài liệu, template và hướng dẫn apply.",
     shopSubtitle: "Các tài liệu được TBA chuẩn bị sẵn để giúp học sinh chuẩn bị hồ sơ, phỏng vấn, CV/resume và thư giới thiệu tốt hơn.",
     paymentEyebrow: "Cách thanh toán",
-    paymentTitle: "Chọn ngôn ngữ phù hợp, sau đó thanh toán theo hướng dẫn."
+    paymentTitle: "Chọn ngôn ngữ phù hợp, sau đó thanh toán theo hướng dẫn.",
+    paymentBody: "Bản tiếng Việt thanh toán qua Google Form kèm chuyển khoản/VietQR. Bản tiếng Anh thanh toán qua Payhip.",
     openForm: "Mở Google Form",
     materialsEyebrow: "Tài liệu số",
     materialsTitle: "Mua lẻ từng tài liệu hoặc chọn combo đầy đủ.",
@@ -251,7 +253,7 @@ function bindBasics() {
 
 function renderDestinations() {
   const track = $("#destinationTrack");
-  if (!track) return;
+  if (!track || typeof DESTINATIONS === "undefined") return;
 
   const schools = [...DESTINATIONS, ...DESTINATIONS, ...DESTINATIONS];
 
@@ -269,7 +271,7 @@ function renderDestinations() {
 
 function renderServices() {
   const grid = $("#serviceGrid");
-  if (!grid) return;
+  if (!grid || typeof SERVICES === "undefined") return;
 
   grid.innerHTML = SERVICES.map((s) => `
     <article class="service-card reveal">
@@ -285,7 +287,7 @@ function renderServices() {
 
 function renderProcess() {
   const grid = $("#processGrid");
-  if (!grid) return;
+  if (!grid || typeof PROCESS === "undefined") return;
 
   grid.innerHTML = PROCESS.map((p) => `
     <article class="process-card reveal">
@@ -320,6 +322,8 @@ function resultCard(r) {
 }
 
 function renderResults() {
+  if (typeof RESULTS === "undefined") return;
+
   const featured = $("#featuredResultsGrid");
   if (featured) {
     featured.innerHTML = RESULTS.slice(0, 2).map(resultCard).join("");
@@ -363,7 +367,7 @@ function renderResults() {
 
 function renderFilters() {
   const row = $("#filterRow");
-  if (!row) return;
+  if (!row || typeof RESULTS === "undefined") return;
 
   const cats = ["All", ...new Set(RESULTS.map((r) => r.category))];
 
@@ -392,6 +396,8 @@ function bindResultButtons() {
 }
 
 function openResult(id) {
+  if (typeof RESULTS === "undefined") return;
+
   const r = RESULTS.find((x) => x.id === id);
   const modal = $("#resultModal");
 
@@ -421,7 +427,7 @@ $(".modal-close")?.addEventListener("click", () => {
 
 function renderFaq() {
   const list = $("#faqList");
-  if (!list) return;
+  if (!list || typeof FAQS === "undefined") return;
 
   list.innerHTML = FAQS.map((f) => `
     <div class="faq-item">
@@ -449,19 +455,19 @@ function roadmap() {
   let rec = [];
 
   if (goal === "scholarship") {
-    rec.push(currentLang === "vi" ? "Scholarship Planning + Essay Strategy" : "Scholarship Planning + Essay Strategy");
+    rec.push("Scholarship Planning + Essay Strategy");
   }
 
   if (goal === "profile") {
-    rec.push(currentLang === "vi" ? "Profile Strategy + Projects/Competitions" : "Profile Strategy + Projects/Competitions");
+    rec.push("Profile Strategy + Projects/Competitions");
   }
 
   if (goal === "essay") {
-    rec.push(currentLang === "vi" ? "Essay & Storytelling" : "Essay & Storytelling");
+    rec.push("Essay & Storytelling");
   }
 
   if (goal === "admission") {
-    rec.push(currentLang === "vi" ? "School List + Application Planning" : "School List + Application Planning");
+    rec.push("School List + Application Planning");
   }
 
   if (timeline === "soon") {
@@ -547,7 +553,7 @@ function renderShopProducts() {
       ? SHOP_PAYMENT.vi.formLink
       : (product.payhipUrl || "#");
 
-    const buyText = isVI ? "Mua tài liệu" : "Buy Now";
+    const buyText = isVI ? "Mua tài liệu" : "Buy on Payhip";
 
     return `
       <article class="shop-card reveal">
